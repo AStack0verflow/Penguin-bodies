@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Car Bodies Done Right</title>
+	<meta name="description" content="Property Features" />
+	<meta name="keywords" content="" />
+  
+	<link rel="stylesheet" type="text/css" media="all" href="../pbody/stylesheets/main.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../pbody/stylesheets/lightview.css" />
+  	<link rel="stylesheet" type="text/css" href="../pbody/stylesheets/jquery.ad-gallery.css">
+    <link rel="stylesheet" type="text/css" href="../pbody/stylesheets/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+
+	<noscript>
+		<link rel="stylesheet" type="text/css" href="../pbody/stylesheets/noscript.css" />
+	</noscript>
+
+    <link rel="profile" href="http://microformats.org/profile/hcard" />
+    <link rel="shortcut icon" href="../pbody/images/common/favicon.icon">
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" media="all" href="/stylesheets/ie.css" />
+	<![endif]-->
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" type="text/css" media="all" href="/stylesheets/ie.css" />
+	<![endif]-->	
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" type="text/css" media="all" href="/stylesheets/ie6.css" />
+		<script type="text/javascript" src="/js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<![endif]-->
+	
+  
+    
+
+<script type="text/javascript" src="../pbody/js/main.js"></script>
+
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="../pbody/js/jquery.ad-gallery.js"></script>
+<script type="text/javascript">
+(function($) { 
+  $(function() {
+  var galleries = $('.ad-gallery').adGallery();
+  $('#switch-effect').change(
+    function() {
+      galleries[0].settings.effect = $(this).val();
+      return false;
+    }
+  );
+  $('#toggle-slideshow').click(
+    function() {
+      galleries[0].slideshow.toggle();
+      return false;
+    }
+  );
+  $('#toggle-description').click(
+    function() {
+      if(!galleries[0].settings.description_wrapper) {
+        galleries[0].settings.description_wrapper = $('#descriptions');
+      } else {
+        galleries[0].settings.description_wrapper = false;
+      }
+      return false;
+    }
+  );
+});
+})(jQuery);
+
+</script>
+
+
+
+
+<script type="text/javascript">
+$.noConflict();
+  jQuery(document).ready(function($) 
+    {
+      var pathname = window.location.hash;
+      $(".tab_content").hide(); //Hide all content
+      if (pathname.search("#") == -1)
+      {
+        //When page loads...
+        $("ul.tabs li:first").addClass("current").show(); //Activate first tab
+        $(".tab_content:first").show(); //Show first tab content
+      }
+      else
+      {
+        var destTab = pathname.substr(1 , pathname.length);
+        // alert(destTab);
+        $("ul.tabs li."+ destTab).addClass("current").show(); //Activate first tab
+        $("div#"+ destTab +".tab_content").show(); //Show first tab content
+      }
+   //On Click Event
+     $("ul.tabs li").click(function() {
+       if(pathname.search("#") == -1)
+       {
+         $("ul.tabs li").removeClass("current"); //Remove any "active" class
+         $(this).addClass("current"); //Add "active" class to selected tab
+         // alert(this)
+         $(".tab_content").hide(); //Hide all tab content
+
+         var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+         $(activeTab).fadeIn(); //Fade in the active ID content
+         return false;
+     }
+     else
+     {
+       $("ul.tabs li").removeClass("current"); //Remove any "active" class
+       $(this).addClass("current"); //Add "active" class to selected tab
+       // alert(this)
+       $(".tab_content").hide(); //Hide all tab content
+
+       var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+       $(activeTab).fadeIn(); //Fade in the active ID content
+       return false;
+       
+     }
+     });
+        
+  });
+
+</script>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/prototype/1.7/prototype.js'></script>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js'></script>
+
+<script type='text/javascript' src='../pbody/js/lightview.js'></script>
+ </head>
+
+<body>
+
+<div class="container">
+
+  <ol id="accessibility-nav">
+	<li><a href="#navigation">Skip to navigation</a></li>
+	<li><a href="#content">Skip to content</a></li>
+	<li><a href="#sidebar">Skip to sidebar</a></li>
+</ol>
+<!-- / accessibility-nav -->
+<hr />
+
+<div id="header">
+	<a href="../pbody/index.htm" rel="home" title="Go to homepage" class="site-name"><h1 class="headname">Penguin Bodies</h1></a>
+
+
+  <div id="navigation">
+<ul>
+    <li id="menu_home"><a href="../pbody/index.htm">Home</a></li>
+    <li id="menu_features" class="active"><a href="../pbody/johnsfavs.htm">John's Favs</a></li>
+    <li id="menu_blog"><a href="../pbody/evsfavs.htm">Ev's Favs</a></li>
+    <li id="menu_tenants"><a href="../pbody/electric.htm">Electric</a></li>
+    <li id="menu_find"><a href="../pbody/clunker.htm">Clunker-Junkers</a></li>
+</ul> <!-- end ul#nav -->
+</div>
+	<!-- / navigation -->
+</div>
+<!-- / header -->
+<hr />
+
+
+
+  <div id="middle-section-subpage">
+	<div id="banner">
+		<img src="/images/inner-page/subpage_banner.gif" width="863" height="156" alt="" />
+	</div>
+
+	<div id="subpage-title-holder">
+		<h1>John's Favs</h1>
+	</div>
+</div>
+
+
+	<div id="cols-wide">
+		<div id="content-wide">
+			<!-- the tabs -->
+			<ul class='tabs'><li class="carlist"><a href='#carlist' >Cars</a></li><!--li class="neighborhood"><a href='#neighborhood' >Neighborhood</a></li><li class="photo_gallery"><a href='#photo_gallery' >Gallery</a></li--></ul>
+<div class="panes">
+  
+    <!--div id='features' class='tab_content'>
+
+</div-->
+    
+    <div id='carlist' class='tab_content'>
+	<h2>Sweet rides that need some work</h2>
+  <ul class='caritem'>
+    <li class='odd'>
+      <a href="http://sfbay.craigslist.org/sfc/cto/4525153521.html" class="lightview" title='Fiat Spyder' ><img src="http://images.craigslist.org/00101_8RQQH9NBJXR_600x450.jpg" height="100" class='thumb'/></a>
+			<a href="http://sfbay.craigslist.org/sfc/cto/4525153521.html" class="lightview"><h3>Spyder</h3>
+      <p>
+        <span class='sqft'>1973</span><br/>
+        <span class='bdba'>Fiat</span><br/>
+        <span class='price'>$1,500</span><br/>
+      </p></a>
+    </li>
+	
+	<li class='odd'>
+      <a href="http://sacramento.craigslist.org/cto/4561088910.html" class="lightview" title='BMW 2002' ><img src="http://images.craigslist.org/00z0z_1G6l0N8ST93_600x450.jpg" height="100" class='thumb' /></a>
+      <a href="http://sacramento.craigslist.org/cto/4561088910.html" class="lightview"><h3>2002</h3>
+      <p>
+        <span class='sqft'>1970</span><br/>
+        <span class='bdba'>BMW</span><br/>
+        <span class='price'>$2,700</span><br/>
+      </p></a>
+    </li>
+
+
+    <li class='odd'>
+      <a href="http://sacramento.craigslist.org/cto/4545059745.html" class="lightview" title='BMW 2002' ><img src="http://images.craigslist.org/00L0L_lMyFYsB6nQT_600x450.jpg" height="100" class='thumb' /></a>
+      <a href="http://sacramento.craigslist.org/cto/4545059745.html" class="lightview"><h3>2002</h3>
+      <p>
+        <span class='sqft'>1965</span><br/>
+        <span class='bdba'>BMW</span><br/>
+        <span class='price'>$2,500</span><br/>
+      </p></a>
+    </li>
+
+    <li class='odd no-border'>
+      <a href="http://sacramento.craigslist.org/cto/4560170098.html" class="lightview" title='Datsun 250z' ><img src="http://images.craigslist.org/00p0p_6KVP2wgyDPD_600x450.jpg" height="100" class='thumb' /></a>
+      <a href="http://sacramento.craigslist.org/cto/4560170098.html" class="lightview"><h3>250Z</h3>
+      <p>
+        <span class='sqft'>19??</span><br/>
+        <span class='bdba'>Datson</span><br/>
+        <span class='price'> $1300 - $1450</span><br/>
+      </p></a>
+    </li>
+	</ul>
+</div>
+
+</div>
+			<!-- tab "panes" -->
+		</div>
+		<!-- / content -->
+		<hr />
+		<hr />
+	</div>
+	<!-- / cols -->
+
+	<footer id="footer">
+	<p class="vcard">&copy; 2013 - 2014  
+		<span class="org">Penguin Bodies</span>, 
+		<span class="adr">
+	  		<span class="street-address"> 1285 Lasuen Ct.</span>,&nbsp;
+	  		<span class="locality">Millbrae</span>,&nbsp;
+			<span class="region">CA</span>&nbsp;
+			<span class="postal-code">94030</span>
+		</span>
+	</p>
+	
+	
+</footer>
+<!-- / footer -->
+
+
+</div>
+<!-- / container -->
+</body>
+
+</html>
